@@ -1,0 +1,21 @@
+A tiny benchmark for parsers of Haskell
+                                                         Kazu Yamamoto
+
+This benchmark compares String, Lazy ByteString, and Lazy Text of
+Parsec3. Support of Lazy Text for Lazy Text is found:
+
+	https://github.com/kazu-yamamoto/parsec3/commit/58c268c37e54a470c841c3ef5ecb7722f625552e
+
+This benchmark parses a GNU Texi file and extract strings matched to
+"@samp{...}". You need to prepare a GNU Texi file by yourself.  You
+can download the following and save it as "input.texi" in this
+directory.
+
+	https://github.com/kazu-yamamoto/Mew/raw/master/info/mew.texi
+
+Then execute, the benchmark:
+
+	% sh bench.sh
+
+After execution, you can find "plot.png".
+
