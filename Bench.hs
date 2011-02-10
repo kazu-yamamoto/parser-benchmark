@@ -7,12 +7,12 @@ import Parser
 import Progression.Main
 
 file :: FilePath
-file = "input.texi"
+file = "input"
 
 main :: IO ()
 main = do
     cs <- readF file
     defaultMain $ do
         bgroup "" [
-            bench "samp" $ nf parseSamp cs
+            bench "dict" $ nf parseTarget cs
           ]
